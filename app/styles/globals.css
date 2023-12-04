@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary-light: 253, 250, 247;
+    --bg-primary-green: 20, 110, 71;
+    --bg-primary-brown: 201, 124, 77;
+
+    --text-primary-grey: 118, 118, 118;
+    --text-primary-green: 20, 110, 71;
+  }
+
+  body * {
+    @apply transition-colors duration-100;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-2;
+  }
+
+  .content-container {
+    @apply px-2 py-4;
+  }
+
+  .mobile-content-wrapper {
+    @apply h-[calc(100vh_-_56px-_68px)] max-h-[calc(100vh_-_56px-_68px)] overflow-auto;
+  }
+
+  .input-error {
+    @apply border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500;
+  }
+
+  .input-success {
+    @apply border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500;
+  }
+}
